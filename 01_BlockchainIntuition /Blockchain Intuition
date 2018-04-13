@@ -1,0 +1,124 @@
+Blockchain Intuition 
+
+What's is blockchain ? 
+-> A blockchain is a continously growing list of records, called blocks, which are linked and secured using cryptography.
+-> Each block is composed of data, hash and prevous hash (the hash of the previous block) => blocks are cryptographically linked together. 
+-> Key concepts associated with Blockchain : Mining, Concensus Protocol, Hash Cryptography, Distributed P2P Network, Immutable Ledger. 
+
+Understanding SHA256-Hash 
+-> https://tools.superdatascience.com/blockchain/hash
+-> Digital finger print of a document created by the NSA. 
+-> 64 characters long. 
+-> It's a hexadecimal hash, it has a numbers from 0 to 9 and letters A B C D E F G H I.....Z
+-> Same data => same hash / same finger print. 
+-> Change a little the data => big effect. 
+-> 5 requirements for Hash algorithms 
+	-one way (no reverse engineering)
+	-deterministic (same result)
+	-fast computation 
+	-avalanche effect (little change in data/ big change in algorithm)
+	-must withstand collisions 
+
+Imnmutable Ledger 
+-> Any time we need a consensus about facts, we use a ledger. Ledgers record the facts underpinning the modern economy.
+-> Use of Blackchain for property, diamonds, art transactions. 
+-> If you want to change one block, all the chain after this block is no longer valid. 
+-> Blockchain must replace traditional ledger (ex : Haiti)
+-> To read the Blockchain economy : 
+https://medium.com/@cryptoeconomics/the-blockchain-economy-a-beginners-guide-to-institutional-cryptoeconomics-64bf2f2beec4
+
+
+Distributed P2P network 
+-> The blockchain is distributed between different nodes. 
+-> Each node has a copy of the blockchain. 
+-> If a blck is attacked on a node, the others nodes will restore the blockchain corrupted. 
+
+
+How Mining works : Nonce? part 1 
+-> A block is made of : 
+	- a block name 
+	- a nonce (number)
+	- data : not only one transaction. 
+	-previous hash 
+	-hash 
+-> The nonce allows to monitore the hash. 
+-> If you change the nonce, you change the hash. 
+
+
+How mining works : Nonce part 2 
+Hash is an hexadecimal number of 64 bits 
+-> Le système hexadécimal nécessite l'introduction de 16 symboles, représentant les 16 premiers entiers naturels : 0 ; 1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 7 ; 8 ; 9 ; A ; B ; C ; D ; E ; F.
+A => 10 ; B=> 11; C=>12, D=13; E =>14, F=>15
+
+-> binaire	1.0101.1010.1010.1100.1111.0111
+->  regroupé par 4	  1 	  0101 	  1010 	  1010 	  1100 	  1111 	  0111
+->  regroupé en hexadécimal 	  1 	 5	 A	 A	 C	 F	 7
+-> hexadécimal	15AACF7 
+-> decimal   (Décimal)	22719735
+
+-> If the miner finds a hash below the target ('0000') -> validation of the algorithm. 
+
+-> Can't change name of the block, the data, prev Hash => change the Nonce. 
+
+-> The miner is change the nonce to find the right nonce that will generate the hash below the target => The Golden nonce. 
+Then the first that is finding the Nonce wins and validate the block=> add the block to the blockchain.
+
+
+Byzantine Fault Tolerance 
+-> Decentralized system : Concensus protocol fault tolerant. 
+-> Blockchain, airplane, rocket, nuclear powerplant system. 
+-> The Byzantine Generals Problem : https://medium.com/all-things-ledger/the-byzantine-generals-problem-168553f31480
+
+
+Concensus Protocol : defense against Attackers 
+-> Attackers : a bad node added at the end of the blockchain.
+-> Competing chains : two different blocks with different transactions mined and validated at the same time at the end of the chain. 
+-> Concensus protocol: 
+	->PoW (proof of work) used by Bitcoin and Ethereum 
+	->PoS (proof of stake)
+	->Other 
+
+# PoW
+-> Billion of iterations from the part of the miners to find the right Nonce/ Golden Nonce -> a lot of time and computing power and electricity. 
+-> The Hash they obtain at the end (corresponding to the Golden nonce)is the proof of work. 
+-> Incentives for the miners: Miner will receive bitcoin/ ethereum when he adds a new block + fees associated to the transaction registred in the block + incentives to play fair to play according to the rules. 
+
+
+Concesus Protocol : Proof of work(PoW)
+-> Groups of nodes who have the majority computing power (more than 50%) have the most chance to validate a block.
+-> Junk block are named orphaned block and the transaction fees are not perceived by the miner. 
+-> Wait until a couple of transaction have been accepted. 
+
+Blockchain Demo 
+-> https://tools.superdatascience.com/blockchain/blockchain
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,69 @@
+Smart Contract Intuition 
+
+What is a smart contract 
+-> Smart contract is the program that is distributed on the computer. 
+-> Each node has : 
+-history of the all smart contracts 
+-history of all transactions of the smart contract 
+-current state of all smart contract (execution)
+
+-> Blockchain : the solution for transparency in product supply chain. 
+https://www.provenance.org/whitepaper
+
+-> Smart contract for dummies 
+https://medium.freecodecamp.org/smart-contracts-for-dummies-a1ba1e0b9575
+
+
+/ What is a Dapps : decentralized Application 
+-> Dapp is the frontend 
+-> Smart contracts is the backend of the Dapp. 
+-> Dapp => allows users to interact with the blockchain 
+-> Steemit : twitter on the blockchain. 
+https://steemit.com/
+
+
+/Ethereum : Virtual Machine and Gas (security)
+-> In Case on the virus on small contracts 
+-> Security threats : viruses and access to private files, infinite loops. 
+-> Against viruses : EVM Ethereum virtual machine that is running on the computer and no link with the computer. If something go wrong, it's on teh Ethereum Virtual Machine. 
+-> Against infinite loops : Gas. For any computation running on the blockchain, the user has to pay. Like Essence to run the car. 
+run an addition multiplication = 3 unit of gas. 
+-> Code in solidity -> execution code<-> gas. 
+-> Write the most efficie: https://ethgasstation.info/
+Bitcoin => create cryptocurrency 
+Ethereum => network runs on the blockchain. 
+
+
+/Decentralized Autonomous Organization (DAOs)
+-> Organization designed in the blockchain with smart contracts. 
+-> No human intervention.  
+-> To read : https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide/
+
+
+/The DAO Attack 
+-> https://www.cryptocompare.com/coins/guides/the-dao-the-hack-the-soft-fork-and-the-hard-fork/
+-> https://www.bloomberg.com/features/2017-the-ether-thief/
+-> Problem not in the blockchain but in the code of the App. 
+-> Reverse the funds to the people. 
+
+
+/ Soft and Hard Forks
+-> Due to the DAO attach -> new chain of Ethereum Classic 
+-> To increase the number of transactions in a block -> new chain BitchainCash 8MB of transactions. 
+-> Keep on mining with GPU -> BitcoinGold. 
+-> Hard Fork of the software.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

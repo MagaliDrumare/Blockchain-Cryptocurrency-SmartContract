@@ -1,0 +1,168 @@
+Cryptocurrency 
+
+What is Bitcoin? 
+
+-> Technology : BlockChain 
+-> Protocol : How participants of Bitcoin Network are working?
+	-Waves Ethereum Bitcoin Neo Ripple Monero. 
+	-Each of this protocol have a coin.
+-> Tokens (ICO) : rely on smart contracts which are built on the top of different protocols. 
+	-For example in ethereum : hundreds of token 
+	TRX, REP, RHOC, PPT, AE, SNT, MKR, BNB
+	-No tokens on bitcoin, ripple. 
+
+-> Market Capitalization of CryptoCurrency : 
+https://coinmarketcap.com/fr/
+
+-> Bitcoin created by Satoshi Nakamoto 
+	-People can make transactions even if they don't know each other. 
+	-Remove the bank intermediary
+
+-> The Bitcoin Ecosystem: 
+	-Nodes : people who want to make transaction 
+	-Miners : add block to the blockchain 
+	-Large Mines : miners with a lot of power 
+	-Mining pool : when miners get together to work 
+
+
+Bitcoin's Monetary Policy 
+
+-> All the information on blockchain.com
+-> Article : https://guerrilla-capitalism.com/articles/this-time-is-different-part-2-what-bitcoin-really-is/
+
+-> The Halving 
+	-Total of bitcoins in circulation ever: 21 Million Bitcoin by 2140. 
+	-Block reward is divided by two every 20000 bitcoins.
+	-But the fees for mining are increasing. 
+	-Transaction fees are meant to remplace block rewards. 
+	-Deflationary system. 
+
+->  Block Frequency 
+	-In average a bitcoin is mined every ten minutes 
+
+
+Understanding Mining Difficulty. 
+
+-> How is the current Target 
+	-> Current target 18 leading zeros 
+	-> Propability of possible hashes = 16exp64 = 10exp77
+	-> Probability of total valid hashes (with 18 leading zeros)= 2X10exp55
+	Probability of total valid hashes is nothing compared to Propability of possible hashes.
+	-> Probability that a randomly picked is valid : 
+	2x10exp-22 less chance of winning lottery. 
+
+-> How is 'Mining Difficulty' calculated? 
+-> Difficulty = current/ max target 
+-> Difficulty is adjusted every 2 weeks 
+-> How much is hard to mine compared to the very start. 
+-> Difficulty is adjusted by the None itself. 
+
+
+Virtual tour of a Bitcoin Mine 
+-> https://qz.com/1054805/what-its-like-working-at-a-sprawling-bitcoin-mine-in-inner-mongolia/
+
+-> https://www.buybitcoinworldwide.com/mining/pools/
+
+
+Mining Pools
+-> Mining pools are groups of cooperating miners who agree to share block rewards in proportion to their contributed mining hash power.
+-> Miners combine their hashing power. 
+-> Distributed the nonce among the different nodes.
+-> Why China : the price of the electricity 
+-> Bitcoin mining and energy consumption 
+	-> https://powercompare.co.uk/bitcoin/
+	-> https://blog.bitcoin.org.hk/bitcoin-mining-and-energy-consumption-4526d4b56186
+
+
+Nonce Range 
+-> Nonce 32-bit number between 0 and 4 billion 
+-> Timestamp : +1 every second the miner has access to the whole range of Nonce. 
+-> A miner alone never reach the limit of 4 billion thanks the Timestamp process. Not the case for a mining pool. (1)
+
+
+How miners pick their transaction? part 1 
+-> Transactions appear in a MEMPOOL.
+-> Transaction id and fees. 
+-> The miner chooses the high fees transaction. If the transaction is not high enough => rejected. 
+-> (1) Solution: Change the block configuration. Change the data. 
+remove a transaction and choose another transaction. 
+
+
+How miners pick their transaction? part 2 
+-> Average block size 1 MB (mega bytes)
+-> A lot of transactions, the fees increase. 
+(december 2017)
+-> BTC.com : accelerator of transaction. If you want to accelerate you transaction you have to pay an extra fee. 
+-> https://www.coindesk.com/information/how-bitcoin-mining-works/
+
+CPU's vs GPU's vs ASIC's 
+-> CPU = central processing unit-general <10MH/s
+-> GPU = graphics processing unit-specialized matrix and graph <1GH/s
+-> ASIC = Application Specific Integrated Circuit-totally specialized 
+>1000 GH/s 
+-> Cloud Mining development. 
+-> With Ethereum only use a GPU not Asic. (Ethereum needs to access memory)
+-> When comparing two processors : compare the H/s between to processors for only one Cryptocurrency. 
+
+
+How do Mempools work? 
+-> Mining of the block with transactions -> block added to the blockchain in each node and transactions 
+remove from the Mempool of each node. 
+
+
+Orphan blocks 
+-> Detached orphaned blocks are valid blocks which are part of the main chain. 
+-> Important to wait for 6 confirmations for your transaction to be successful. 
+-> Which block result to be part of the longer chain. 
+
+
+51% Attack
+-> 51% of the hash rate
+-> Mining without distribution to the network -> They have more hashing power and the chain becomes longer. 
+-> And at the end publication of the longest chain and they keep their assets Ferrari yatch, other coins without paying them because the transaction are cancelled.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

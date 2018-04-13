@@ -1,0 +1,168 @@
+1_Download Ganache
+http://truffleframework.com/ganache/
+
+2_Dowload EtherWallet 
+https://github.com/kvhnuke/etherwallet/releases/tag/v3.21.06
+
+3_Go in the folder etherwallet-v3.21.06
+clic on index.html 
+
+4_Remix Solidity 
+https://remix.ethereum.org
+
+Read : http://solidity.readthedocs.io/en/v0.4.21/ 
+
+
+-> Step 1 :  in the IDE Remix Solidity : define the public variable 
+//Magcoin ICO 
+// Version of compiler 
+pragma solidity ^0.4.11;
+
+contract magcoin_ico{
+   
+   //Introducing the maximum number of Magcoin available for sale
+   uint public max_magcoins = 1000000;
+   
+   //Introducing the USD to Magcoin conversion rate 
+   //1 USD =1000 Magcoins
+   uint public usd_to_magcoins = 1000;
+   
+   //Introducing the total of Magcoins bought by the investors
+    uint public total_magcoins_bought = 0;
+    
+}
+
+
+-> Step 2 : Mapping from the investor adress to its equity in Magcoins and USD
+    // Mapping is function in which the data are stored in array
+    // input will be the address of the investor 
+    // output equity (capitaux)
+    mapping(address=>uint)equity.magcoins;
+    mapping(address=>uint)equity.usd;
+
+
+-> Step 3 : The modifier 
+modifier can_buy_magcoins(uint usd_invested){
+        // imput the condition 
+        require(usd_invested*usd_to_magcoins+total_magcoins_bought<=max_magcoins);
+        _;
+        }
+
+
+-> Step 4 : Getting the equity 
+        // adress is the type and investor is the name of the variable
+        function equity_in_magcoins(address investor) external constant returns (uint){
+            return equity.magcoins[investor]
+        }
+  function equity_in_magcoins(address investor) external constant returns (uint){
+            return equity.usd[investor]
+        }
+
+-> Step 5: Function to buy Magcoins 
+ // Buying Magcoins
+         //the function buy_magcoins linked to the modifier can_buy_magcoins  will be applied only if require is verified: 
+        function buy_magcoins(address investor,uint usd_invested) external
+        can_buy_magcoins(usd_invested){
+            uint magcoins_bought=usd_invested*usd_to_magcoins;
+            equity.magcoins[investor]+=magcoins_bought;
+            equity.usd[investor]=equity.magcoins[investor]/1000;
+            total_magcoins_bought +=magcoins_bough;
+        }
+
+
+-> Step 6 : Function sell Magcoins 
+// Selling Magcoins 
+        function sell_magcoins(address investor,uint magcoins_sold) external {
+            equity.magcoins[investor]-= magcoins_sold;
+            equity.usd[investor]=equity.magcoins[investor]/1000;
+            total_magcoins_bought -= magcoins_sold;
+        }
+
+
+All the solidity Code 
+//Magcoin ICO 
+// Version of compiler 
+pragma solidity ^0.4.11;
+
+contract magcoin_ico{
+   
+   //Introducing the maximum number of Magcoin available for sale
+   uint public max_magcoins = 1000000;
+   
+   //Introducing the USD to Magcoin conversion rate 
+   //1 USD =1000 Magcoins
+   uint public usd_to_magcoins = 1000;
+   
+   //Introducing the total of Magcoins bought by the investors
+    uint public total_magcoins_bought = 0;
+    
+    // Mapping from the investor adress to its equity in Magcoins and USD
+    // Mapping is function in which the data are stored in array
+    // input will be the address of the investor 
+    // output equity (capitaux)
+    mapping(address=>uint)equity_magcoins;
+    mapping(address=>uint)equity_usd;
+    
+    // Checking if an investor can buy a Magcoins 
+    
+    modifier can_buy_magcoins(uint usd_invested){
+        // imput the condition 
+        require(usd_invested*usd_to_magcoins+total_magcoins_bought<=max_magcoins);
+         _;
+        }
+        // Getting the equity in Magcoins of an investor    
+        // adress is the type and investor is the name of the variable
+        function equity_in_magcoins(address investor) external constant returns (uint){
+            return equity_magcoins[investor];
+        }
+        
+        function equity_in_usd(address investor) external constant returns (uint){
+            return equity_usd[investor]; 
+        }
+        
+        // Buying Magcoins
+         //the function buy_magcoins linked to the modifier can_buy_magcoins  
+        // will be applied onlyif require is verified
+        function buy_magcoins(address investor,uint usd_invested) external
+        can_buy_magcoins(usd_invested){
+            uint magcoins_bought=usd_invested*usd_to_magcoins;
+            equity_magcoins[investor]+=magcoins_bought;
+            equity_usd[investor]=equity_magcoins[investor]/1000;
+            total_magcoins_bought += magcoins_bought;
+        }
+
+
+// Demo-> Investor who wants to buy magcoins
+-Open Ganache HTTP://127.0.0.1:7545
+-Open index.html 
+-Click on Network ETH (MyEtherWallet)
+-Set up your Custom Node 
+-Node Name : magcoin ICO 
+	url : http://127.0.0.1 
+	port : 7545
+	choose ETH 
+	Save and custom 
+=> connexion 
+
+
+// Deploy the contract 
+Put the small contract in the Blockchain : byte of solidity + private key
+-Contracts -> click on Deploy contract 
+	Byte code -> in https://remix.ethereum.org -> details (copy-paste). 
+	Only keep the information between the " ". 
+-Find the key in Ganache and paste it.  
+-Sign transaction 
+-Deploy Contract on the blockchain
+
+
+// Interact with the contract 
+-Contracts -> click on Interact with contract 
+	Contract Adress -> Ganache Blocks-> Block 1 -> Created Contract Address
+	ABI  Byte code -> in https://remix.ethereum.org -> details (copy-paste). 
+
+
+
+
+
+
+
